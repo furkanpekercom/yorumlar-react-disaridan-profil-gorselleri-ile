@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Comment from "./Comment"
+import Card from "./Card"
+import {faker} from "@faker-js/faker";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui comments" style={{paddingTop:"20px", paddingLeft:"20px",}}>
+
+
+        <Comment name="Furkan Peker" gun="1 Gün Önce" yorum="Canım istedi bu kodu da attım." star="5" avatar={faker.image.avatar()}/>
+   
+
+      
+        <Comment name="Persephone Jack" gun="3 Gün Önce" yorum="Helel len sana." star="5" avatar={faker.image.avatar()}/>
+      
+
     </div>
-  );
-}
+  ); 
+};
 
 export default App;
